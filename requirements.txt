@@ -12,7 +12,9 @@ certifi==2018.1.18        # via requests
 chardet==3.0.4            # via aiohttp, requests
 idna-ssl==1.0.0           # via aiohttp
 idna==2.6                 # via idna-ssl, requests, yarl
+memory-profiler==0.52.0
 multidict==4.1.0          # via aiohttp, yarl
+psutil==5.4.3             # via memory-profiler
 requests==2.18.4
 urllib3==1.22             # via requests
 yarl==1.1.1               # via aiohttp
