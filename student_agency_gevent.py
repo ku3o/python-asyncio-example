@@ -1,5 +1,6 @@
 from datetime import date, timedelta
 
+from gevent import monkey, spawn, joinall; monkey.patch_all()
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,8 +30,8 @@ def scrape_route(departure, arrival, date):
 def scrape_multiple_dates(departure, arrival, dates):
     """Scrape prices for a specifc route and multiple dates."""
     # Start scrape for all dates
-    for date in dates:
-        scrape_route(departure, arrival, date)
+    greenlets = [spawn(scrape_route, departure, arrival, date) for date in dates]
+    joinall(greenlets)
 
 
 def main():
