@@ -34,7 +34,6 @@ def scrape_multiple_dates(departure, arrival, dates):
 
 
 def main():
-    next_thirty_days = [date.today() + timedelta(days=days) for days in range(30)]
     next_hundred_days = [date.today() + timedelta(days=days) for days in range(100)]
     # Search for Praha Brno
     scrape_multiple_dates('ID10202003', 'ID10202002', next_hundred_days)
