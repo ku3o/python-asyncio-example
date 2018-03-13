@@ -30,7 +30,7 @@ def scrape_multiple_dates(departure, arrival, dates):
     """Scrape prices for a specifc route and multiple dates."""
     # Init ThreadPool without a limit for a thread. Number of threads can be limited by
     # `max_workers`.
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=100) as executor:
         [executor.submit(scrape_route, departure, arrival, date) for date in dates]
 
 
