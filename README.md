@@ -26,7 +26,7 @@ seconds.
 
 For a long time, threading was the only way how to speed up an IO heavy
 application. Threads come up with a drawback of a higher memory usage, but with
-a great advantage of speed. Exection time is ~17sec. Compared to 80 seconds for
+a great advantage of speed. Exection time is ~17sec. Compared to 29 seconds for
 synchronous execution, this a huge difference.
 
 ![ThreadPoolExecutor](reports/thread.png?raw=true "ThreadPoolExecutor") Example
