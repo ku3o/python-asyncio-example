@@ -4,19 +4,41 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-aiohttp==3.0.2
-async-timeout==2.0.0      # via aiohttp
-attrs==17.4.0             # via aiohttp
+aiohttp==3.7.4
+    # via -r requirements.in
+async-timeout==3.0.1
+    # via aiohttp
+attrs==17.4.0
+    # via aiohttp
 beautifulsoup4==4.6.0
-certifi==2018.1.18        # via requests
-chardet==3.0.4            # via aiohttp, requests
+    # via -r requirements.in
+certifi==2018.1.18
+    # via requests
+chardet==3.0.4
+    # via
+    #   aiohttp
+    #   requests
 gevent==1.2.2
-greenlet==0.4.13          # via gevent
-idna-ssl==1.0.0           # via aiohttp
-idna==2.6                 # via idna-ssl, requests, yarl
+    # via -r requirements.in
+greenlet==0.4.13
+    # via gevent
+idna==2.6
+    # via
+    #   requests
+    #   yarl
 memory-profiler==0.52.0
-multidict==4.1.0          # via aiohttp, yarl
-psutil==5.4.3             # via memory-profiler
+    # via -r requirements.in
+multidict==5.1.0
+    # via
+    #   aiohttp
+    #   yarl
+psutil==5.4.3
+    # via memory-profiler
 requests==2.18.4
-urllib3==1.22             # via requests
-yarl==1.1.1               # via aiohttp
+    # via -r requirements.in
+typing-extensions==3.7.4.3
+    # via aiohttp
+urllib3==1.22
+    # via requests
+yarl==1.1.1
+    # via aiohttp
